@@ -31,6 +31,8 @@ h1, h2, a {
 
 .avatar img {
 	border-radius: 50%;
+  border: 3px #013442;
+  border-style: groove;
 }
 .socialmedia {
   font-size: 20px;
