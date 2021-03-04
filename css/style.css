@@ -6,12 +6,12 @@ h1, h2, a {
 	background-color: #015870;
 	min-height: 100vh;
 }
-.hero h1, h2 {
+h1, h2 {
 	color: white;
+  text-transform: uppercase;
 }
 
 .hero h1 {
-	text-transform: uppercase;
 	font-size: 40px;
 	font-weight: 300;
 }
@@ -123,8 +123,36 @@ h1, h2, a {
   background-color: #015870;
 }
 .portfolio h1 {
-  color: white;
   text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 300;
+}
+.contactform {
+  min-height: 100vh;
+  background: linear-gradient(270deg, #015870, #057898, #088eb4);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.contactform h1 {
   font-size: 32px;
   font-weight: 300;
 }
