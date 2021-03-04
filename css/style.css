@@ -6,7 +6,7 @@ h1, h2, a {
 	background-color: #015870;
 	min-height: 100vh;
 }
-h1, h2 {
+h1 {
 	color: white;
   text-transform: uppercase;
 }
@@ -16,7 +16,8 @@ h1, h2 {
 	font-weight: 300;
 }
 
-.hero h2 {
+h2 {
+  color: white;
 	font-size: 26px;
 	font-weight: 200;
 }
