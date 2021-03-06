@@ -1,37 +1,37 @@
 h1, h2, a {
-	font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .hero {
-	background-color: #015870;
-	min-height: 100vh;
+  background-color: #015870;
+  min-height: 100vh;
 }
 h1 {
-	color: white;
+  color: white;
   text-transform: uppercase;
 }
 
 .hero h1 {
-	font-size: 40px;
-	font-weight: 300;
+  font-size: 40px;
+  font-weight: 300;
 }
 
 h2 {
   color: white;
-	font-size: 26px;
-	font-weight: 200;
+  font-size: 26px;
+  font-weight: 200;
 }
 
 .hero .has-padding {
-	padding-top: 50px;
+  padding-top: 50px;
 }
 
 .navbar a {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .avatar img {
-	border-radius: 50%;
+  border-radius: 50%;
   border: 3px #013442;
   border-style: groove;
 }
