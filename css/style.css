@@ -9,17 +9,13 @@ h1, h2, a {
 h1 {
   color: white;
   text-transform: uppercase;
-}
-
-.hero h1 {
+  font-weight: 700;
   font-size: 40px;
-  font-weight: 300;
 }
-
 h2 {
   color: white;
   font-size: 26px;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .hero .has-padding {
@@ -123,11 +119,6 @@ h2 {
 .portfolio {
   background-color: #015870;
 }
-.portfolio h1 {
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 300;
-}
 .contactform {
   min-height: 100vh;
   background: linear-gradient(270deg, #015870, #057898, #088eb4);
@@ -152,10 +143,6 @@ h2 {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
-}
-.contactform h1 {
-  font-size: 32px;
-  font-weight: 300;
 }
 .white-background {
   background-color: white;
