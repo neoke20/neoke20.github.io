@@ -147,3 +147,6 @@ h2 {
 .white-background {
   background-color: white;
 }
+.about p {
+  font-weight: 300;
+}
