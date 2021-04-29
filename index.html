@@ -1,82 +1,655 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Required meta tags -->
+<html lang="en" class="font-primary">
+  <head>
+    <title>Blend Mode | Unify - Responsive Website Template</title>
+
+    <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-	<!-- custom CSS -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/stylewaves.css">
-	<!-- Google fonts -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/934ea9bb8d.js" crossorigin="anonymous"></script>
-	<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-	<link rel="alternate icon" href="img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Fav-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%7CYellowtail%3A400%7CMontserrat%3A700%7CRoboto%3A300%2C700%7CRaleway%3A400%2C500%2C800">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/offcanvas.css">
+    <link rel="stylesheet" href="assets/vendor/dzsparallaxer/dzsparallaxer.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="assets/vendor/icon-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/icon-etlinefont/style.css">
+    <link rel="stylesheet" href="assets/vendor/icon-hs/style.css">
+    <link rel="stylesheet" href="assets/vendor/icon-line-pro/style.css">
+
+    <link rel="stylesheet" href="assets/vendor/animate.css">
+    <link rel="stylesheet" href="assets/vendor/slick-carousel/slick/slick.css">
+
+    <link rel="stylesheet" href="assets/vendor/hs-megamenu/src/hs.megamenu.css">
+    <link rel="stylesheet" href="assets/vendor/hamburgers/hamburgers.min.css">
+
+    <link rel="stylesheet" href="assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+
+    <!-- CSS Unify -->
+    <link rel="stylesheet" href="assets/css/unify.css">
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="assets/vendor/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="assets/vendor/revolution-slider/revolution/css/settings.css">
+    <link rel="stylesheet" href="assets/vendor/revolution-slider/revolution/css/layers.css">
+    <link rel="stylesheet" href="assets/vendor/revolution-slider/revolution/css/navigation.css">
+  </head>
+
+  <body id="home-section">
+  <main>
+    <!-- Header -->
+    <header id="js-header" class="u-header u-header--static--lg u-header--show-hide--lg u-header--change-appearance--lg" data-header-fix-moment="500" data-header-fix-effect="slide">
+      <div class="u-header__section u-header__section--light g-bg-white g-transition-0_3 g-py-10" data-header-fix-moment-exclude="g-bg-white g-py-10" data-header-fix-moment-classes="g-bg-white-opacity-0_7 u-shadow-v18 g-py-0">
+        <nav class="js-mega-menu navbar navbar-expand-lg">
+          <div class="container">
+            <!-- Responsive Toggle Button -->
+            <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-3 g-right-0" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+              <span class="hamburger hamburger--slider">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+              </span>
+              </span>
+            </button>
+            <!-- End Responsive Toggle Button -->
+            <!-- Logo -->
+            <a href="#home-section" class="navbar-brand">
+              <img src="assets/img/logo/logo.png" height="50" alt="Image Description">
+            </a>
+            <!-- End Logo -->
+
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg" id="navBar">
+              <ul class="navbar-nav ml-auto text-uppercase g-font-weight-600 u-main-nav-v8 u-sub-menu-v1">
+                <li class="nav-item g-mx-2--md g-mx-5--xl g-mb-5 g-mb-0--lg">
+                  <a href="#home-section" class="nav-link">Home
+
+              </a>
+                </li>
+                
+                <li class="nav-item g-mx-2--md g-mx-5--xl g-mb-5 g-mb-0--lg">
+                  <a href="#about" class="nav-link">About me
+                
+              </a>
+                </li>
+                <li class="nav-item g-mx-2--md g-mx-5--xl g-mb-5 g-mb-0--lg">
+                  <a href="#portfolio" class="nav-link">Portfolio
+              </a>
+                </li>
+                <li class="nav-item g-mx-2--md g-mx-5--xl g-mb-5 g-mb-0--lg">
+                  <a href="#!" class="nav-link">Contact
+                
+              </a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Navigation -->
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+
+      <div id="revSliderWrapper" class="rev_slider_wrapper fullscreen-container" style="background-color: transparent; padding: 0;"
+           data-alias="blendmode-header"
+           data-source="gallery">
+        <!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
+        <div id="revSlider" class="rev_slider fullscreenbanner" style="display: none;"
+             data-version="5.4.1">
+          <ul>
+            <!-- SLIDE  -->
+            <li data-index="rs-3203"
+                data-transition="fade"
+                data-slotamount="default"
+                data-hideafterloop="0"
+                data-hideslideonmobile="off"
+                data-easein="default"
+                data-easeout="default"
+                data-masterspeed="300"
+                data-delay="9000"
+                data-rotate="0"
+                data-saveperformance="off"
+                data-title="Slide">
+              <!-- MAIN IMAGE -->
+              <img class="rev-slidebg" src="assets/videos/videoloading.jpg" alt="screenshot of video of yellow paint"
+                   data-bgposition="center center"
+                   data-bgfit="cover"
+                   data-bgparallax="5">
+              <!-- LAYERS -->
+              <!-- BACKGROUND VIDEO LAYER -->
+              <div class="rs-background-video-layer"
+                   data-forcerewind="on"
+                   data-volume="mute"
+                   data-videowidth="100%"
+                   data-videoheight="100%"
+                   data-videomp4="assets/videos/herovideo.mp4"
+                   data-videopreload="auto"
+                   data-videoloop="loop"
+                   data-forceCover="1"
+                   data-aspectratio="16:9"
+                   data-autoplay="true"
+                   data-autoplayonlyfirsttime="false"></div>
+
+              <!-- LAYER NR. 1 -->
+              <div id="slide-3203-layer-18" class="tp-caption tp-shape tp-shapewrapper" style="z-index: 5; background-color: rgba(230, 74, 25, 0.9); border-color: rgba(0, 0, 0, 0);"
+                   data-x="['center','center','center','center']"
+                   data-y="['middle','middle','middle','middle']"
+                   data-hoffset="['0','0','0','0']"
+                   data-voffset="['0','0','0','0']"
+                   data-width="full"
+                   data-height="full"
+                   data-whitespace="nowrap"
+                   data-type="shape"
+                   data-actions=""
+                   data-basealign="slide"
+                   data-responsive_offset="off"
+                   data-responsive="off"
+                   data-frames='[
+                     {"delay":0,"speed":1000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power2.easeInOut"},
+                     {"delay":"bytrigger","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power2.easeInOut"}
+                   ]'
+                   data-textAlign="['inherit','inherit','inherit','inherit']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+                   data-blendmode="lighten"
+                   data-lasttriggerstate="reset"></div>
+
+              <!-- LAYER NR. 2 -->
+              <div id="slide-3203-layer-19" class="tp-caption tp-resizeme tp-svg-layer" style="z-index: 6; min-width: 600px; max-width: 600px; max-width: 600px; max-width: 600px; color: rgba(255, 255, 255, 0.2);"
+                   data-x="['center','center','center','center']"
+                   data-y="['middle','middle','middle','middle']"
+                   data-hoffset="['0','0','0','0']"
+                   data-voffset="['0','0','0','0']"
+                   data-width="['600','600','500','400']"
+                   data-height="['600','600','500','400']"
+                   data-whitespace="nowrap"
+                   data-type="svg"
+                   data-svg_src="assets/img/ic_layers_24px.svg"
+                   data-svg_idle="sc:transparent;sw:0;sda:0;sdo:0;"
+                   data-responsive_offset="on"
+                   data-frames='[
+                     {"delay":1000,"speed":2000,"frame":"0","from":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},
+                     {"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}
+                   ]'
+                   data-textAlign="['inherit','inherit','inherit','inherit']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+                   data-blendmode="overlay"></div>
+
+              <!-- LAYER NR. 3 -->
+              <div id="slide-3203-layer-16" class="tp-caption tp-shape tp-shapewrapper" style="z-index: 7; background-color: rgba(121, 85, 72, 0.9); border-color: rgba(0, 0, 0, 0);"
+                   data-x="['center','center','center','center']"
+                   data-y="['middle','middle','middle','middle']"
+                   data-hoffset="['0','0','0','0']"
+                   data-voffset="['0','0','0','0']"
+                   data-width="full"
+                   data-height="full"
+                   data-whitespace="nowrap"
+                   data-type="shape"
+                   data-basealign="slide"
+                   data-responsive_offset="off"
+                   data-responsive="off"
+                   data-frames='[
+                     {"delay":"bytrigger","speed":1000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power2.easeInOut"},
+                     {"delay":"bytrigger","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power2.easeInOut"}
+                   ]'
+                   data-textAlign="['inherit','inherit','inherit','inherit']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+                   data-blendmode="lighten"
+                   data-lasttriggerstate="reset"></div>
+
+              <!-- LAYER NR. 4 -->
+              <div id="slide-3203-layer-1" class="tp-caption" style="z-index: 8; min-width: 640px; max-width: 640px; white-space: normal; font-size: 180px; line-height: 180px; font-weight: 400; color: rgba(0, 0, 0, 1); font-family: Yellowtail; letter-spacing: -5px; box-sizing: content-box;"
+                   data-x="['center','center','center','center']"
+                   data-y="['middle','middle','middle','middle']"
+                   data-hoffset="['0','0','0','0']"
+                   data-voffset="['-120','-120','-100','-90']"
+                   data-fontsize="['180',140','100','80']"
+                   data-lineheight="['180','180','150','100']"
+                   data-width="['640','480','480','320']"
+                   data-height="none"
+                   data-whitespace="normal"
+                   data-type="text"
+                   data-responsive_offset="off"
+                   data-responsive="off"
+                   data-frames='[
+                     {"delay":1000,"speed":2000,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:1.3;sY:1.3;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},
+                     {"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}
+                   ]'
+                   data-textAlign="['center','center','center','center']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[50,48,40,25]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+                   data-blendmode="overlay">Kevin K.
+              </div>
+
+              <!-- LAYER NR. 5 -->
+              <div id="slide-3203-layer-2" class="tp-caption" style="z-index: 9; min-width: 480px; max-width: 480px; white-space: normal; font-size: 20px; line-height: 20px; font-weight: 700; color: rgba(0, 0, 0, 1); font-family: Montserrat; letter-spacing: 3px;"
+                   data-x="['center','center','center','center']"
+                   data-y="['middle','middle','middle','middle']"
+                   data-hoffset="['0','0','0','0']"
+                   data-voffset="['-20','-20','-12','-21']"
+                   data-fontsize="['20','18','17','17']"
+                   data-lineheight="['20','20','17','17']"
+                   data-width="['480','480','480','320']"
+                   data-height="none"
+                   data-whitespace="normal"
+                   data-type="text"
+                   data-responsive_offset="off"
+                   data-responsive="off"
+                   data-frames='[
+                     {"delay":1200,"speed":1000,"frame":"0","from":"y:20px;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},
+                     {"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}
+                   ]'
+                   data-textAlign="['center','center','center','center']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[0,0,0,0]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[0,0,0,0]"
+                   data-blendmode="overlay">Stunning Web Design For Your Business
+              </div>
+
+              <!-- LAYER NR. 6 -->
+              <div id="slide-3203-layer-4" class="tp-caption rev-btn" style="z-index: 10; white-space: nowrap; font-size: 13px; line-height: 60px; font-weight: 700; color: rgba(255, 255, 255, 1); font-family: Montserrat; background-color: rgba(255, 255, 255, 0); border: solid 2px rgba(255, 255, 255, 0.5); border-radius: 5px; outline: none; box-shadow: none; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; letter-spacing: 2px; cursor: pointer; text-transform: uppercase;"
+                   data-x="['center','center','center','center']"
+                   data-y="['middle','middle','middle','middle']"
+                   data-hoffset="['0','0','0','0']"
+                   data-voffset="['80','80','87','71']"
+                   data-lineheight="['60','60','60','50']"
+                   data-width="none"
+                   data-height="none"
+                   data-whitespace="nowrap"
+                   data-type="button"
+                   data-actions='[
+                     {"event":"mouseenter","action":"stoplayer","layer":"slide-3203-layer-18"},
+                     {"event":"mouseenter","action":"startlayer","layer":"slide-3203-layer-16"},
+                     {"event":"mouseleave","action":"startlayer","layer":"slide-3203-layer-18"},
+                     {"event":"mouseleave","action":"stoplayer","layer":"slide-3203-layer-16"},
+                     {"event":"click","action":"scrollbelow"}
+                   ]'
+                   data-responsive_offset="off"
+                   data-responsive="off"
+                   data-frames='[
+                     {"delay":1500,"speed":1000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},
+                     {"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},
+                     {"frame":"hover","speed":"1000","ease":"Power2.easeInOut","force":true,"to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(0, 0, 0, 1.00);bc:rgba(255, 255, 255, 0);"}
+                   ]'
+                   data-textAlign="['inherit','inherit','inherit','inherit']"
+                   data-paddingtop="[0,0,0,0]"
+                   data-paddingright="[50,50,50,30]"
+                   data-paddingbottom="[0,0,0,0]"
+                   data-paddingleft="[50,50,50,30]"
+                   data-blendmode="overlay">More about me
+              </div>
+            </li>
+          </ul>
+
+          <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+        </div>
+      </div><!-- END REVOLUTION SLIDER -->
 
 
-	<title>Kevin Konczak - Web Designer</title>
-</head>
-<body>
-<div class="bodyhidden">
-	<nav class="navbar navbar-expand-sm navbar-light bg-light">
-	  <div class="container-fluid">
-	  	<a class="navbar-brand" href="index.html">
-      		<img src="img/avatar.svg" alt="" width="30" height="24" style="border-radius: 50px;">
-    	</a>
-	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-	      <span class="navbar-toggler-icon"></span>
-	    </button>
-	    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-	      <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
-	        <li class="nav-item">
-	          <a class="nav-link active" aria-current="page" href="#">Home</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="./about.html">About</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="./portfolio.html">Portfolio</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="./contact.html">Contact</a>
-	        </li>
-	        <li class="nav-item dropdown">
-	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">SNS</a>
-	          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          	<li><a class="dropdown-item text-center socialmedia github" href="https://github.com/neoke20" target="_blank"><i class="fab fa-github github"></i></a></li>
-	          	<li><a class="dropdown-item text-center socialmedia linkedin" href="https://www.linkedin.com/in/konczakkevin/" target="_blank"><i class="fab fa-linkedin linkedin"></i></a></li>
-	          	<li><a class="dropdown-item text-center socialmedia instagram" href="https://www.instagram.com/narutal/" target="_blank"><i class="fab fa-instagram instagram"></i></a></li>
-	          </ul>
-	        </li>
-	        <li class="nav-item dropdown">
-	        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-language" aria-hidden="true"></i></a>
-	        	<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          	<li><a class="dropdown-item text-center disabled" href="index.html">ENG</a></li>
-		          	<li><a class="dropdown-item text-center" href="jp/index.html">日本語</a></li>
-	          	</ul>	
-	        </li>
-	    </div>
-	  </div>
-	</nav>
-	<section class="hero text-center">
-		<div class="container has-padding">
-			<h1>web designer, digital marketer, and avid learner</h1>
-			<h2>I like the visual impact of a well-designed website, and work hard for that</h2>
-		</div>
-		<div class="avatar pt-5">
-			<img src="img/avatar.svg" height="150">
-		</div>
-				<div class="ocean">
-		  <div class="wave"></div>
-		  <div class="wave"></div>
-		</div>
-	</section>
+      <!-- ABOUT SECTION -->
+      <section class="container g-pt-100 g-pb-40" id="about">
+      <figure class="row">
+        <!-- Figure Image -->
+        <div class="col-md-8 offset-md-2 col-lg-4 offset-lg-0 g-mb-30">
+          <img class="w-100" src="assets/img/profile.jpg" alt="Image Description">
+        </div>
+        <!-- End Figure Image -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-</div>
-</body>
+        <!-- Figure Body -->
+        <div class="col-lg-8">
+          <div class="d-flex justify-content-between g-mb-10">
+            <div class="g-mb-20">
+              <h4 class="h5 g-mb-5">Kevin Konczak</h4>
+              <em class="d-block g-font-style-normal g-font-size-default text-uppercase g-color-primary">Web Developer</em>
+            </div>
 
+            <!-- Figure Social Icons -->
+            <ul class="list-inline">
+              <li class="list-inline-item g-mx-2">
+                <a class="u-icon-v1 u-icon-slide-up--hover g-color-primary g-bg-gray-light-v5 g-color-gray-light-v1--hover rounded-circle" href="#!">
+                  <i class="g-font-size-default g-line-height-1 u-icon__elem-regular fa fa-instagram"></i>
+                  <i class="g-font-size-default g-line-height-0_8 u-icon__elem-hover fa fa-instagram"></i>
+                </a>
+              </li>
+              <li class="list-inline-item g-mx-2">
+                <a class="u-icon-v1 u-icon-slide-up--hover g-color-primary g-bg-gray-light-v5 g-color-gray-light-v1--hover rounded-circle" href="#!">
+                  <i class="g-font-size-default g-line-height-1 u-icon__elem-regular fa fa-linkedin"></i>
+                  <i class="g-font-size-default g-line-height-0_8 u-icon__elem-hover fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+            <!-- End Figure Social Icons -->
+          </div>
+
+          <!-- Figure Info -->
+          <div class="g-mb-50">
+            <p>Born and raised in France, I have spent close to 15 years in Asia. I speak French, English and Japanese. I love everything design related and it is important to me that the projects I deliver are pleasing to the eye. I find satisfaction in seeing customers' smiles after they discover their new website.</p>
+            <p>As a creative, I love to bring my experience to people who want to have a visual impact on their customers but are not certain where to start. I strongly believe in the concept of "content over design" and a well-designed website should not stop you from getting your message accross, so let me know what you want to say on your website, and let me work on a design for you!</p>
+          </div>
+          <!-- End Info -->
+
+          <div class="row">
+            <div class="col-sm-6">
+              <!-- Progress Bar v2 -->
+              <h4 class="h6 g-mb-5">HTML - 80%</h4>
+              <div class="js-hr-progress-bar progress rounded-0 g-height-4 mb-5">
+                <div class="js-hr-progress-bar-indicator progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!-- End Progress Bar v2 -->
+
+              <!-- Progress Bar v2 -->
+              <h4 class="h6 g-mb-5">CSS - 75%</h4>
+              <div class="js-hr-progress-bar progress rounded-0 g-height-4 mb-5">
+                <div class="js-hr-progress-bar-indicator progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!-- End Progress Bar v2 -->
+            </div>
+
+            <div class="col-sm-6">
+              <!-- Progress Bar v2 -->
+              <h4 class="h6 g-mb-5">Ruby - 10% (currently learning)</h4>
+              <div class="js-hr-progress-bar progress rounded-0 g-height-4 mb-5">
+                <div class="js-hr-progress-bar-indicator progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!-- End Progress Bar v2 -->
+
+              <!-- Progress Bar v2 -->
+              <h4 class="h6 g-mb-5">CSS - 76%</h4>
+              <div class="js-hr-progress-bar progress rounded-0 g-height-4 mb-5">
+                <div class="js-hr-progress-bar-indicator progress-bar" role="progressbar" style="width: 76%;" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!-- End Progress Bar v2 -->
+            </div>
+          </div>
+        </div>
+        <!-- End Figure Body -->
+      </figure>
+    </section>
+    <!-- END ABOUT SECTION -->
+
+
+    <!-- PORTFOLIO SECTION -->
+        <section class="g-pt-30 d-sm-none d-md-block" id="portfolio">
+          <div class="text-center g-mb-50">
+            <h2 class="h4">Portfolio
+            </h2>
+          </div>
+
+          <!-- Nav tabs -->
+          <ul class="nav justify-content-center u-nav-v2-1 u-nav-rounded-3 g-mb-50" role="tablist" data-target="hero-03" data-tabs-mobile-type="slide-up-down" data-btn-classes="btn btn-md btn-block u-btn-outline-primary">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#genkijacs" role="tab">GenkiJACS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#globalwithus" role="tab">Global With us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#thiswebsite" role="tab">This Website</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#yourwebsite" role="tab">Your Website?</a>
+            </li>
+          </ul>
+          <!-- End Nav tabs -->
+
+          <!-- Tab panes -->
+          <div id="hero-03" class="tab-content">
+            <div id="genkijacs" class="tab-pane fade show active" role="tabpanel">
+              <div id="shortcode3-1">
+                <div class="shortcode-html">
+                  <section class="g-flex-centered g-height-500 g-bg-img-hero u-bg-overlay g-bg-black-opacity-0_7--after g-color-white-opacity-0_7 g-py-20" style="background-image: url(assets/img/portfolio/genkijacsbkgd.jpg);">
+                    <div class="container u-bg-overlay__inner">
+                      <div class="row">
+                        <div class="col-md-6 align-self-center g-py-20">
+                          <h2 class="h4 text-uppercase g-letter-spacing-1 g-color-white g-mb-20">GenkiJACS</h2>
+                          <p class="lead mb-0 g-line-height-2">This is the school I currently work for. I finished their new website project when their developer left. Once the project was finished, I also implemented new features and content since 2 new schools were opened and online lessons were created. <a href="https://www.genkijacs.com" target="_blank">Visit the website</a> </p>
+                        </div>
+
+                        <div class="col-md-6 align-self-center g-py-20">
+                          <img class="w-100" src="assets/img/portfolio/genkijacssnapshot.jpg" alt="Iamge Description">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+
+            </div>
+
+            <div id="globalwithus" class="tab-pane fade" role="tabpanel">
+              <div id="shortcode3-2">
+                <div class="shortcode-html">
+                  <section class="g-flex-centered g-height-500 g-bg-img-hero u-bg-overlay g-bg-black-opacity-0_7--after g-color-white-opacity-0_7 g-py-20" style="background-image: url(assets/img/portfolio/globalwithusbkgd.jpg);">
+                    <div class="container u-bg-overlay__inner">
+                      <div class="row">
+                        <div class="col-md-6 align-self-center g-py-20">
+                          <h2 class="h4 text-uppercase g-letter-spacing-1 g-color-white g-mb-20">Global With us</h2>
+                          <p class="lead mb-0 g-line-height-2">This is the parent company of genkiJACS that was recently created. They liked the look and feel of the GenkijACS's website, so they asked me to develop their website as well. This is an on-going project and should be delivered current May 2021.</p>
+                        </div>
+
+                        <div class="col-md-6 align-self-center g-py-20">
+                          <img class="w-100" src="assets/img/portfolio/globalwithussnapshot.jpg" alt="Iamge Description">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+
+            <div id="thiswebsite" class="tab-pane fade" role="tabpanel">
+              <div id="shortcode3-3">
+                <div class="shortcode-html">
+                  <section class="g-flex-centered g-height-500 g-bg-img-hero u-bg-overlay g-bg-black-opacity-0_7--after g-color-white-opacity-0_7 g-py-20" style="background-image: url(assets/img/portfolio/thiswebsitebkgd.jpg);">
+                    <div class="container u-bg-overlay__inner">
+                      <div class="row">
+                        <div class="col-md-6 align-self-center g-py-20">
+                          <h2 class="h4 text-uppercase g-letter-spacing-1 g-color-white g-mb-20">This website</h2>
+                          <p class="lead mb-0 g-line-height-2">It may seem obvious, but I have also developed this website for myself. I hope you enjoy visiting it and that it is helping convincing you that I have the right set of skills and eye for details to develop your project.</p>
+                        </div>
+
+                        <div class="col-md-6 align-self-center g-py-20">
+                          <img class="w-100" src="assets/img/portfolio/thiswebsitesnapshot.jpg" alt="Iamge Description">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+
+            <div id="yourwebsite" class="tab-pane fade" role="tabpanel">
+              <div id="shortcode3-3">
+                <div class="shortcode-html">
+                  <section class="g-flex-centered g-height-500 g-bg-img-hero u-bg-overlay g-bg-black-opacity-0_7--after g-color-white-opacity-0_7 g-py-20" style="background-image: url(https://picsum.photos/1920/1080);">
+                    <div class="container u-bg-overlay__inner">
+                      <div class="row">
+                        <div class="col-md-6 align-self-center g-py-20">
+                          <h2 class="h4 text-uppercase g-letter-spacing-1 g-color-white g-mb-20">Your website</h2>
+                          <p class="lead mb-0 g-line-height-2">If you liked what you have seen so far, I would be pleased to talk about your project and find the design that fits your needs, so we can develop this together!</p>
+                        </div>
+
+                        <div class="col-md-6 align-self-center g-py-20">
+                          <img class="w-100" src="https://picsum.photos/400/270" alt="Iamge Description">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Tab panes -->
+        </section>
+    <!-- END PORTFOLIO SECTION -->
+
+      <!-- Copyright Footer -->
+      <footer class="g-bg-primary g-color-white-opacity-0_8 g-py-20">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 text-center text-md-left g-mb-10 g-mb-0--md">
+              <div class="d-lg-flex">
+                <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">&copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>new Date().getFullYear()>2010&&document.write(+new Date().getFullYear());</script> Kevin K. - All Rights Reserved.</small>
+              </div>
+            </div>
+
+            <div class="col-md-4 align-self-center">
+              <ul class="list-inline text-center text-md-right mb-0">
+                <li class="list-inline-item g-mx-10" data-toggle="tooltip" data-placement="top" title="Instagram">
+                  <a href="#!" class="g-color-white-opacity-0_5 g-color-white--hover">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item g-mx-10" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                  <a href="#!" class="g-color-white-opacity-0_5 g-color-white--hover">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Copyright Footer -->
+    </main>
+  </body>
+
+  <!-- JS Global Compulsory -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+  <script src="assets/vendor/jquery.easing/js/jquery.easing.min.js"></script>
+  <script src="assets/vendor/popper.min.js"></script>
+  <script src="assets/vendor/popper.js/index.js"></script>
+  <script src="assets/vendor/tooltip.js/index.js"></script>
+  <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="assets/vendor/masonry/dist/masonry.pkgd.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/slick-carousel/slick/slick.js"></script>
+  <script src="assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+
+  <!-- JS Unify -->
+  <script src="assets/js/hs.core.js"></script>
+  <script src="assets/js/components/hs.header.js"></script>
+  <script src="assets/js/helpers/hs.hamburgers.js"></script>
+  <script src="assets/js/components/hs.scroll-nav.js"></script>
+  <script src="assets/js/components/hs.carousel.js"></script>
+
+  <!-- JS Revolution Slider -->
+  <script src="assets/vendor/revolution-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script src="assets/vendor/revolution-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <script src="assets/vendor/revolution-slider/revolution-addons/slicey/js/revolution.addon.slicey.min.js"></script>
+
+  <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+  <!-- JS Custom -->
+  <script src="assets/js/custom.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // initialization of carousel
+      $.HSCore.components.HSCarousel.init('.js-carousel');
+
+      // initialization of masonry
+      $('.masonry-grid').imagesLoaded().then(function () {
+        $('.masonry-grid').masonry({
+          columnWidth: '.masonry-grid-sizer',
+          itemSelector: '.masonry-grid-item',
+          percentPosition: true
+        });
+      });
+
+      // Header
+      $.HSCore.components.HSHeader.init($('#js-header'));
+      $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+      // Initialization of HSMegaMenu plugin
+      $('.js-mega-menu').HSMegaMenu({
+        event: 'hover',
+        pageContainer: $('.container'),
+        breakpoint: 991
+      });
+    });
+
+    var tpj = jQuery,
+      revAPI;
+
+    tpj(document).ready(function () {
+      if (tpj('#revSlider').revolution == undefined) {
+        revslider_showDoubleJqueryError('#revSlider');
+      } else {
+        revAPI = tpj('#revSlider').show().revolution({
+          sliderType: 'standard',
+          jsFileLocation: 'revolution/js/',
+          sliderLayout: 'fullscreen',
+          dottedOverlay: 'none',
+          delay: 9000,
+          navigation: {
+            onHoverStop: 'off'
+          },
+          responsiveLevels: [1240, 1024, 778, 480],
+          visibilityLevels: [1240, 1024, 778, 480],
+          gridwidth: [1240, 1024, 778, 480],
+          gridheight: [1000, 900, 960, 720],
+          lazyType: 'none',
+          parallax: {
+            type: 'scroll',
+            origo: 'slidercenter',
+            speed: 400,
+            levels: [5, 10, 15, 20, 25, 30, 50, 60, -5, -10, -15, -20, -25, -30, -35, 55]
+          },
+          shadow: 0,
+          spinner: 'off',
+          stopLoop: 'on',
+          stopAfterLoops: 0,
+          stopAtSlide: 1,
+          shuffle: 'off',
+          autoHeight: 'off',
+          fullScreenAutoWidth: 'off',
+          fullScreenAlignForce: 'off',
+          fullScreenOffsetContainer: '',
+          fullScreenOffset: '60px',
+          disableProgressBar: 'on',
+          hideThumbsOnMobile: 'off',
+          hideSliderAtLimit: 0,
+          hideCaptionAtLimit: 0,
+          hideAllCaptionAtLilmit: 0,
+          debugMode: false,
+          fallbacks: {
+            simplifyAll: 'off',
+            nextSlideOnWindowFocus: 'off',
+            disableFocusListener: false
+          }
+        });
+      }
+    });
+  </script>
 </html>
