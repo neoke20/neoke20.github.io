@@ -1,1 +1,7 @@
 /* Add here all your css styles (customizations) */
+::-webkit-scrollbar-thumb {
+	background: #795548;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #84584a; 
+}
