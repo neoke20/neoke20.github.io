@@ -54,6 +54,9 @@
   </head>
 
   <body id="home-section">
+  <!-- SCROLL UP BUTTON -->
+  <button onclick="topFunction()" id="scrollBtn" title="Go to top" style="display: block;"><i class="hs-icon hs-icon-arrow-top"></i></button>
+  <!-- END SCROLL UP BUTTON -->
   <main>
     <!-- Header -->
     <header id="js-header" class="u-header u-header--static--lg u-header--show-hide--lg u-header--change-appearance--lg" data-header-fix-moment="500" data-header-fix-effect="slide">
@@ -751,7 +754,7 @@
           <div class="row">
             <div class="col-md-8 text-center text-md-left g-mb-10 g-mb-0--md">
               <div class="d-lg-flex">
-                <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">&copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>new Date().getFullYear()>2010&&document.write(+new Date().getFullYear());</script> Kevin K. - All Rights Reserved.</small>
+                <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">&copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>new Date().getFullYear()>2010&&document.write(+new Date().getFullYear());</script> Kedezain - All Rights Reserved.</small>
               </div>
             </div>
 
@@ -905,4 +908,25 @@
       }
     });
   </script>
+  <script>
+//Get the button
+var mybutton = document.getElementById("scrollBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 </html>
