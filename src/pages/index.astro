@@ -3,6 +3,8 @@ import "../styles/global.css";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
+const experiences = await getCollection("experiences");
+const sortedExperiences = experiences.sort((a, b) => b.data.startDate - a.data.startDate);
 const projects = await getCollection("projects");
 const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
 ---
@@ -93,112 +95,34 @@ const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
         </div>
         <div class="mb-12" id="experience">
           <h2 class="text-5xl font-bold text-text font-vt323 mb-6">Experience</h2>
-          <div class="mb-12">
-            <p class="text-text-light font-bold">2023 - Present</p>
-            <p class="text-text font-outfit-600">Full Stack Developer at SENDo</p>
-            <p class="text-text-light font-bold mb-3">Remote</p>
-            <p class="text-text font-outfit-300 mb-3">
-              From an idea on paper to a fully functional product, I have been involved in the entire development
-              process of various projects, including admin dashboards, internal tools and client-facing websites. We use
-              a wide range of technologies, including React, Remix, TypeScript, PostgreSQL, Python, Django and more. and
-              then deploy on AWS.
-            </p>
-            <ul class="flex flex-wrap gap-2">
-              <li>
-                <div class="pill font-outfit-600">React</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">Remix</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">TypeScript</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">Tailwind CSS</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">Mantine</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">PostgreSQL</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">Python</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">PHP</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">Django</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">Wagtail</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">FastAPI</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">AWS</div>
-              </li>
-            </ul>
-          </div>
-          <div class="mb-12">
-            <p class="text-text-light font-bold">2018 - 2023</p>
-            <p class="text-text font-outfit-600">Front End Developer at GenkiJACS</p>
-            <p class="text-text-light font-bold mb-3">On-site</p>
-            <p class="text-text font-outfit-300 mb-3">
-              Responsible of the development and maintenance of the school's website and various internal tools. The
-              website is the primary source of customer acquisition responsible for 60 to 70% of student enrollments.
-              Also designed multiple corporate websites for the group the school belongs to.
-            </p>
-            <ul class="flex flex-wrap gap-2">
-              <li>
-                <div class="pill font-outfit-600">HTML</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">CSS</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">JavaScript</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">Bootstrap</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">Mantine</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">Unify</div>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p class="text-text-light font-bold">2017 - 2019</p>
-            <p class="text-text font-outfit-600">Web Developer - Freelance</p>
-            <p class="text-text font-outfit-300 mb-3">
-              Building and deploying custom WordPress websites for small businesses and individuals using DIVI page
-              builder and custom themes. Handling both client and technical aspects. I started as a freelance because
-              after self-teaching myself about web development, it was the best way for me to gain valuable experience
-              to transition in my career and in the future obtain a full-time position as a web developer.
-            </p>
-            <ul class="flex flex-wrap gap-2">
-              <li>
-                <div class="pill font-outfit-600">HTML</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">CSS</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">JavaScript</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">WordPress</div>
-              </li>
-              <li>
-                <div class="pill font-outfit-600">DIVI</div>
-              </li>
-            </ul>
-          </div>
+          {
+            sortedExperiences.map((experience: any) => (
+              <div class="mb-12">
+                <div class=" lg:flex lg:gap-4">
+                  <div class="lg:w-1/3 lg:shrink-0">
+                    <p class="text-text font-outfit-600">{experience.data.position}</p>
+                    <p class="text-text-light font-bold">
+                      {experience.data.startDate} - {experience.data.endDate || "Present"}
+                    </p>
+                    <p class="text-text-light font-bold mb-3">
+                      {experience.data.company} {experience.data.location && `- ${experience.data.location}`}
+                    </p>
+                  </div>
+                  <div>
+                    <p class="text-text font-outfit-300 mb-3">{experience.data.description}</p>
+                  </div>
+                </div>
+                <ul class="flex flex-wrap gap-2">
+                  {experience.data.tags &&
+                    experience.data.tags.map((tag: string[]) => (
+                      <li>
+                        <div class="pill font-outfit-600">{tag}</div>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            ))
+          }
         </div>
         <div class="mb-12" id="projects">
           <h2 class="text-5xl font-bold text-text font-vt323 mb-6">Projects</h2>
@@ -207,7 +131,9 @@ const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
               <div class="mb-8 border-b-1 border-secondary-transparent pb-4 last:border-0">
                 <p class="text-text text-lg font-outfit-600 mb-3">{project.data.name}</p>
                 <p class="text-text font-outfit-300 mb-3">{project.data.description}</p>
-                {project.data.image && <Image src={project.data.image} alt={project.data.name} class="mb-3" />}
+                {project.data.image && (
+                  <Image src={project.data.image} alt={project.data.name} class="mb-3 max-w-[250px] lg:max-w-[300px]" />
+                )}
                 <div class="flex flex-wrap">
                   {project.data.tags &&
                     project.data.tags.map((tag) => (
