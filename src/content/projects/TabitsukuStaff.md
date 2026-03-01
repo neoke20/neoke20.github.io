@@ -1,7 +1,7 @@
 ---
 name: "Tabitsuku (staff)"
-description: "Corporate website for my current company"
+description: "An dashboard built for the Tabitsuku microtourism platform. The dashboard was developed for administrators of coupon campaigns."
 image: "./TabitsukuStaff.jpg"
 tags: ["React", "Remix", "Mantine", "TypeScript", "TypeORM"]
-order: 1
+order: 4
 ---
