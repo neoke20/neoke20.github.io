@@ -1,0 +1,47 @@
+---
+import "../../styles/global.css";
+import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <title>{project.data.name} - Kevin Konczak</title>
+  </head>
+  <body class="bg-primary">
+    <div class="px-6 py-10 mb-20">
+      <h1 class="text-center text-text text-xl font-outfit-600 uppercase">{project.data.name}</h1>
+      <Image src={project.data.image} alt={project.data.name} class="w-full h-auto rounded-lg mb-6" />
+      <p>{project.data.description}</p>
+      <div class="text-text">
+        <Content />
+      </div>
+    </div>
+  </body>
+</html>
