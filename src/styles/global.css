@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(0.2022 0.037756 223.3211);
+  --color-secondary: oklch(0.90 0.0815 190.53);
+  --color-secondary-500: oklch(0.50 0.0815 190.53);
+  --color-text: oklch(0.9791 0 0);
+}
+
+.font-vt323 {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-outfit-300 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-outfit-600 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
