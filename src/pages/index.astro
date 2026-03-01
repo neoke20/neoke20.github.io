@@ -2,9 +2,9 @@
 import "../styles/global.css";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
-import sendoGroup from "../images/SendoGroup.webp";
 import { getCollection } from "astro:content";
 const projects = await getCollection("projects");
+const sortedProjects = projects.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <html lang="en">
@@ -84,88 +84,40 @@ const projects = await getCollection("projects");
           </p>
           <ul class="flex flex-wrap gap-2">
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                React
-              </div>
+              <div class="pill font-outfit-600">React</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                Remix
-              </div>
+              <div class="pill font-outfit-600">Remix</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                TypeScript
-              </div>
+              <div class="pill font-outfit-600">TypeScript</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                Tailwind CSS
-              </div>
+              <div class="pill font-outfit-600">Tailwind CSS</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                Mantine
-              </div>
+              <div class="pill font-outfit-600">Mantine</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                PostgreSQL
-              </div>
+              <div class="pill font-outfit-600">PostgreSQL</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                Python
-              </div>
+              <div class="pill font-outfit-600">Python</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                PHP
-              </div>
+              <div class="pill font-outfit-600">PHP</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                Django
-              </div>
+              <div class="pill font-outfit-600">Django</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                Wagtail
-              </div>
+              <div class="pill font-outfit-600">Wagtail</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                FastAPI
-              </div>
+              <div class="pill font-outfit-600">FastAPI</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                AWS
-              </div>
+              <div class="pill font-outfit-600">AWS</div>
             </li>
           </ul>
         </div>
@@ -180,46 +132,22 @@ const projects = await getCollection("projects");
           </p>
           <ul class="flex flex-wrap gap-2">
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                HTML
-              </div>
+              <div class="pill font-outfit-600">HTML</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                CSS
-              </div>
+              <div class="pill font-outfit-600">CSS</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                JavaScript
-              </div>
+              <div class="pill font-outfit-600">JavaScript</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                Bootstrap
-              </div>
+              <div class="pill font-outfit-600">Bootstrap</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                Mantine
-              </div>
+              <div class="pill font-outfit-600">Mantine</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                Unify
-              </div>
+              <div class="pill font-outfit-600">Unify</div>
             </li>
           </ul>
         </div>
@@ -234,39 +162,19 @@ const projects = await getCollection("projects");
           </p>
           <ul class="flex flex-wrap gap-2">
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                HTML
-              </div>
+              <div class="pill font-outfit-600">HTML</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                CSS
-              </div>
+              <div class="pill font-outfit-600">CSS</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                JavaScript
-              </div>
+              <div class="pill font-outfit-600">JavaScript</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                WordPress
-              </div>
+              <div class="pill font-outfit-600">WordPress</div>
             </li>
             <li>
-              <div
-                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
-              >
-                DIVI
-              </div>
+              <div class="pill font-outfit-600">DIVI</div>
             </li>
           </ul>
         </div>
@@ -274,10 +182,15 @@ const projects = await getCollection("projects");
       <div>
         <h2 class="text-5xl font-bold text-text font-vt323 mb-6">Projects</h2>
         {
-          projects.map((project: any) => (
-            <div>
+          sortedProjects.map((project: any) => (
+            <div class="mb-8 border-b-1 border-secondary-transparent pb-4 last:border-0">
               <p class="text-text text-lg font-outfit-600 mb-3">{project.data.name}</p>
               <p class="text-text font-outfit-300 mb-3">{project.data.description}</p>
+              {project.data.image && <Image src={project.data.image} alt={project.data.name} class="mb-3" />}
+              <div class="flex flex-wrap">
+                {project.data.tags &&
+                  project.data.tags.map((tag) => <div class="pill font-outfit-600 inline-block mr-2 mb-2">{tag}</div>)}
+              </div>
             </div>
           ))
         }

@@ -28,3 +28,7 @@
   font-weight: 600;
   font-style: normal;
 }
+
+.pill {
+  @apply flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1
+}
