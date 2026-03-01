@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import sendoGroup from "../images/SendoGroup.webp";
 ---
 
 <html lang="en">
@@ -19,13 +22,264 @@ import "../styles/global.css";
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=VT323&display=swap"
       rel="stylesheet"
     />
-    <title>Astro</title>
+    <title>Kevin Konczak - Portfolio</title>
   </head>
   <body class="bg-primary">
-    <div class="px-6 py-10">
-      <h1 class="text-5xl font-bold text-text font-vt323 mb-3">Kevin Konczak</h1>
+    <div class="px-6 py-10 mb-20">
+      <h1 class="text-6xl font-bold text-text font-vt323 mb-3">Kevin Konczak</h1>
       <p class="text-text text-lg font-outfit-600 mb-3">Full Stack Developer</p>
-      <p class="text-text font-outfit-300">Constant learner, I enjoy engineering solutions for real-world problems.</p>
+      <p class="text-text font-outfit-300 mb-6">
+        Constant learner, I enjoy engineering solutions for real-world problems.
+      </p>
+      <div class="flex gap-2">
+        <a href="https://github.com/neoke20" target="_blank" rel="noopener noreferrer">
+          <Icon name="github" class="text-xl" />
+        </a>
+        <a href="https://www.linkedin.com/in/konczakkevin/" target="_blank" rel="noopener noreferrer">
+          <Icon name="linkedin" class="text-xl" />
+        </a>
+      </div>
+    </div>
+    <div class="px-6 py-10">
+      <div class="mb-12">
+        <h2 class="text-5xl font-bold text-text font-vt323 mb-6">About</h2>
+        <p class="text-text font-outfit-300 mb-3">Hi, my name is Kevin. Thanks for checking my portfolio!</p>
+        <p class="text-text font-outfit-300 mb-3">
+          I have spent the past 7 years working my way up from a web designer to a full-stack web developer, and have
+          enjoyed every step of the journey. I am a constant learner, and I find nothing more rewarding than going from
+          "I don't know how to do this", to "I can do this now!".
+        </p>
+        <p class="text-text font-outfit-300 mb-3">
+          I am currently working as a full stack developer for a Japanese digital marketing startup named <strong
+            >SENDo</strong
+          >, where I work on various projects, including, but not limited to, admin dashboards, internal tools (employee
+          portal, etc), as well as client-facing websites. Thanks to that, I get to work with a wide range of
+          technologies, including React, Remix, TypeScript, PostgreSQL, Python, Django and more. It's a challenging
+          role, but I get to use my Japanese skills, and learn new things every day, so I really enjoy it.
+        </p>
+        <p class="text-text font-outfit-300 mb-3">
+          Prior to that, I was the front end developer of a Japanese language school, responsible of the development and
+          maintenance of the school's website, as well as the development of various internal tools. I also freelanced
+          for a while as a web designer, creating websites for small businesses and individuals who wanted an online
+          presence.
+        </p>
+        <p class="text-text font-outfit-300">
+          Unapologetically geeky, I have a wide range of interests, including video games, movies, reading fantasy. When
+          the season is right, I also like to be outdoor, touch grass and disconnect from the digital world for a while.
+        </p>
+      </div>
+      <div class="mb-12">
+        <h2 class="text-5xl font-bold text-text font-vt323 mb-6">Experience</h2>
+        <div class="mb-12">
+          <p class="text-text-light font-bold">2023 - Present</p>
+          <p class="text-text font-outfit-600">Full Stack Developer at SENDo</p>
+          <p class="text-text-light font-bold mb-3">Remote</p>
+          <p class="text-text font-outfit-300 mb-3">
+            From an idea on paper to a fully functional product, I have been involved in the entire development process
+            of various projects, including admin dashboards, internal tools and client-facing websites. We use a wide
+            range of technologies, including React, Remix, TypeScript, PostgreSQL, Python, Django and more. and then
+            deploy on AWS.
+          </p>
+          <ul class="flex flex-wrap gap-2">
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                React
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                Remix
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                TypeScript
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                Tailwind CSS
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                Mantine
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                PostgreSQL
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                Python
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                PHP
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                Django
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                Wagtail
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                FastAPI
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                AWS
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-12">
+          <p class="text-text-light font-bold">2018 - 2023</p>
+          <p class="text-text font-outfit-600">Front End Developer at GenkiJACS</p>
+          <p class="text-text-light font-bold mb-3">On-site</p>
+          <p class="text-text font-outfit-300 mb-3">
+            Responsible of the development and maintenance of the school's website and various internal tools. The
+            website is the primary source of customer acquisition responsible for 60 to 70% of student enrollments. Also
+            designed multiple corporate websites for the group the school belongs to.
+          </p>
+          <ul class="flex flex-wrap gap-2">
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                HTML
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                CSS
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                JavaScript
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                Bootstrap
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                Mantine
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                Unify
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-text-light font-bold">2017 - 2019</p>
+          <p class="text-text font-outfit-600">Web Developer - Freelance</p>
+          <p class="text-text font-outfit-300 mb-3">
+            Building and deploying custom WordPress websites for small businesses and individuals using DIVI page
+            builder and custom themes. Handling both client and technical aspects. I started as a freelance because
+            after self-teaching myself about web development, it was the best way for me to gain valuable experience to
+            transition in my career and in the future obtain a full-time position as a web developer.
+          </p>
+          <ul class="flex flex-wrap gap-2">
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                HTML
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                CSS
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                JavaScript
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                WordPress
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1 font-outfit-600"
+              >
+                DIVI
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-5xl font-bold text-text font-vt323 mb-6">Projects</h2>
+        <div>
+          <p class="text-text text-lg font-outfit-600 mb-3">SENDo Group Corporate website</p>
+          <p class="text-text font-outfit-300 mb-3">
+            Introduction of the group my company belongs to, and the various services it offers. Built alongside the
+            marketing team and a designer.
+          </p>
+          <Image src={sendoGroup} alt="SENDo Group Corporate website" />
+        </div>
+      </div>
     </div>
   </body>
 </html>

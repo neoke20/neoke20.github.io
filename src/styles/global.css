@@ -3,8 +3,10 @@
 @theme {
   --color-primary: oklch(0.2022 0.037756 223.3211);
   --color-secondary: oklch(0.90 0.0815 190.53);
-  --color-secondary-500: oklch(0.50 0.0815 190.53);
+  --color-secondary-light: oklch(0.50 0.0815 190.53);
+  --color-secondary-transparent: oklch(0.90 0.0815 190.53 / 0.5);
   --color-text: oklch(0.9791 0 0);
+  --color-text-light: oklch(0.60 0 0);
 }
 
 .font-vt323 {
