@@ -3,6 +3,8 @@ import "../styles/global.css";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import sendoGroup from "../images/SendoGroup.webp";
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
 ---
 
 <html lang="en">
@@ -271,14 +273,14 @@ import sendoGroup from "../images/SendoGroup.webp";
       </div>
       <div>
         <h2 class="text-5xl font-bold text-text font-vt323 mb-6">Projects</h2>
-        <div>
-          <p class="text-text text-lg font-outfit-600 mb-3">SENDo Group Corporate website</p>
-          <p class="text-text font-outfit-300 mb-3">
-            Introduction of the group my company belongs to, and the various services it offers. Built alongside the
-            marketing team and a designer.
-          </p>
-          <Image src={sendoGroup} alt="SENDo Group Corporate website" />
-        </div>
+        {
+          projects.map((project: any) => (
+            <div>
+              <p class="text-text text-lg font-outfit-600 mb-3">{project.data.name}</p>
+              <p class="text-text font-outfit-300 mb-3">{project.data.description}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </body>
