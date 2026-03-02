@@ -2,6 +2,7 @@
 import "../../styles/global.css";
 import { getCollection, render } from "astro:content";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -36,11 +37,25 @@ const { Content } = await render(project);
   </head>
   <body class="bg-primary">
     <div class="px-6 py-10 mb-20">
-      <h1 class="text-center text-text text-xl font-outfit-600 uppercase">{project.data.name}</h1>
-      <Image src={project.data.image} alt={project.data.name} class="w-full h-auto rounded-lg mb-6" />
-      <p>{project.data.description}</p>
-      <div class="text-text">
-        <Content />
+      <a href="/" class="text-text text-xl font-outfit-600">
+        <div class="flex justify-center items-center gap-4">
+          <Icon name="arrow-left" class="text-xl" />
+          <h1 class="text-center text-text text-xl font-outfit-600 uppercase">{project.data.name}</h1>
+        </div>
+      </a>
+      <div class="lg:flex lg:gap-12 lg:justify-center lg:mt-20">
+        {
+          project.data.image && (
+            <Image
+              src={project.data.image}
+              alt={project.data.name}
+              class="w-full h-auto rounded-lg my-6 lg:w-1/2 lg:max-w-[700px] lg:my-0 lg:shrink-0"
+            />
+          )
+        }
+        <div class="prose prose-invert">
+          <Content />
+        </div>
       </div>
     </div>
   </body>

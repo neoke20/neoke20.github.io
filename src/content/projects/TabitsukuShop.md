@@ -8,11 +8,10 @@ order: 5
 
 ## About the project
 
-SENDo Group is a corporate website I built for a logistics company.
-The goal was to create a modern, fast, and accessible website.
+The shop version of the Tabitsuku dashboard was created to allow shops enrolled in coupon campaigns created via the main Tabitsuku website to manage their accounts. Via this dashboard, they can verify in real time how many customers have used coupons at their shop, generate invoices and reports, get information about the incoming campaigns, etc.
 
-## Challenges
+## Notable features
 
-- Multilingual support
-- Complex animations
-- SEO optimization
+- Onboarding flow
+- Feature to manage claims
+- Invoice creation
