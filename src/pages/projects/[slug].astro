@@ -37,13 +37,13 @@ const { Content } = await render(project);
   </head>
   <body class="bg-primary">
     <div class="px-6 py-10 mb-20">
-      <a href="/" class="text-text text-xl font-outfit-600">
+      <a href="/#projects" class="text-text text-xl font-outfit-600">
         <div class="flex justify-center items-center gap-4">
           <Icon name="arrow-left" class="text-xl" />
           <h1 class="text-center text-text text-xl font-outfit-600 uppercase">{project.data.name}</h1>
         </div>
       </a>
-      <div class="lg:flex lg:gap-12 lg:justify-center lg:mt-20">
+      <div class="lg:flex lg:gap-12 lg:justify-center lg:mt-20 lg:items-start">
         {
           project.data.image && (
             <Image
@@ -53,8 +53,19 @@ const { Content } = await render(project);
             />
           )
         }
-        <div class="prose prose-invert">
-          <Content />
+        <div>
+          <div class="prose prose-invert mb-12 pb-12 border-b border-secondary-light">
+            <Content />
+          </div>
+          <div class="flex flex-wrap gap-2 justify-center items-center">
+            {project.data.tags && project.data.tags.map((tag) => <span class="pill font-outfit-600">{tag}</span>)}
+          </div>
+          <a href="/#projects" class="text-text text-xl font-outfit-600">
+            <div class="flex justify-start items-center gap-4 mt-12">
+              <Icon name="arrow-left" class="text-xl" />
+              <h1 class="text-center text-text text-xl font-outfit-600 uppercase">back to home</h1>
+            </div>
+          </a>
         </div>
       </div>
     </div>

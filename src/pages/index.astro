@@ -129,7 +129,12 @@ const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
           {
             sortedProjects.map((project: any) => (
               <div class="mb-8 border-b-1 border-secondary-transparent pb-4 last:border-0">
-                <p class="text-text text-lg font-outfit-600 mb-3">{project.data.name}</p>
+                <p class="text-text text-lg font-outfit-600">{project.data.name}</p>
+                <a href={`/projects/${project.id}`}>
+                  <div class="font-outfit-300 text-text px-2 py-1 bg-secondary-light inline-block my-2 rounded border border-primary hover:bg-primary hover:border hover:border-secondary-light transition-colors duration-500">
+                    Check Project
+                  </div>
+                </a>
                 <p class="text-text font-outfit-300 mb-3">{project.data.description}</p>
                 {project.data.image && (
                   <Image src={project.data.image} alt={project.data.name} class="mb-3 max-w-[250px] lg:max-w-[300px]" />
@@ -141,7 +146,6 @@ const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
                     ))}
                 </div>
               </div>
-              <a href={`/projects/${project.id}`}>Go</a>
             ))
           }
         </div>
