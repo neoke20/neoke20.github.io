@@ -16,6 +16,7 @@ const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Kevin Konczak's portfolio website showcasing projects and experience." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,22 +31,27 @@ const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
   </head>
   <body class="bg-primary">
     <div class="lg:flex lg:justify-center lg:mx-40">
-      <div class="px-6 py-10 mb-20 lg:w-1/2 lg:max-h-screen lg:sticky lg:top-0 lg:p-12 lg:mb-0">
+      <header class="px-6 py-10 mb-20 lg:w-1/2 lg:max-h-screen lg:sticky lg:top-0 lg:p-12 lg:mb-0">
         <h1 class="text-6xl font-bold text-text font-vt323 mb-3">Kevin Konczak</h1>
         <p class="text-text text-lg font-outfit-600 mb-3">Full Stack Developer</p>
         <p class="text-text font-outfit-300 mb-6">
           Constant learner, I enjoy engineering solutions for real-world problems.
         </p>
         <div class="flex gap-2">
-          <a href="https://github.com/neoke20" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/neoke20" target="_blank" rel="noopener noreferrer" title="GitHub">
             <Icon name="github" class="text-xl" />
           </a>
-          <a href="https://www.linkedin.com/in/konczakkevin/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.linkedin.com/in/konczakkevin/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+          >
             <Icon name="linkedin" class="text-xl" />
           </a>
         </div>
-      </div>
-      <div class="px-6 py-10 lg:w-1/3 lg:p-0">
+      </header>
+      <main class="px-6 py-10 lg:w-1/3 lg:p-0">
         <div class="hidden lg:block lg:fixed lg:top-4 lg:bg-text lg:text-xl lg:px-6 lg:py-2 lg:rounded-lg">
           <nav>
             <ul class="flex gap-6">
@@ -131,7 +137,9 @@ const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
               <div class="mb-8 border-b-1 border-secondary-transparent pb-4 last:border-0">
                 <p class="text-text text-lg font-outfit-600">{project.data.name}</p>
                 <a href={`/projects/${project.id}`}>
-                  <div class="font-outfit-300 button">Check Project</div>
+                  <div class="font-outfit-300 button" aria-label={`Read more about the project ${project.data.name}`}>
+                    Check Project
+                  </div>
                 </a>
                 <p class="text-text font-outfit-300 mb-3">{project.data.description}</p>
                 {project.data.image && (
@@ -147,7 +155,7 @@ const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
             ))
           }
         </div>
-      </div>
+      </main>
     </div>
   </body>
 </html>

@@ -23,6 +23,7 @@ const { Content } = await render(project);
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Kevin Konczak's portfolio website showcasing projects and experience." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,7 +37,7 @@ const { Content } = await render(project);
     <title>{project.data.name} - Kevin Konczak</title>
   </head>
   <body class="bg-primary">
-    <div class="px-6 py-10 mb-20">
+    <main class="px-6 py-10 mb-20">
       <a href="/#projects" class="text-text text-xl font-outfit-600">
         <div class="flex justify-center items-center gap-4">
           <Icon name="arrow-left" class="text-xl" />
@@ -75,6 +76,6 @@ const { Content } = await render(project);
           </a>
         </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>

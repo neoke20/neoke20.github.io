@@ -31,7 +31,7 @@
 }
 
 .pill {
-  @apply flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1
+  @apply flex items-center text-primary text-xs bg-secondary rounded-full px-2 py-1
 }
 
 .prose {
