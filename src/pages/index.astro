@@ -1,0 +1,153 @@
+---
+import "../styles/global.css";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+const experiences = await getCollection("experiences");
+const sortedExperiences = experiences.sort((a, b) => b.data.startDate - a.data.startDate);
+const projects = await getCollection("projects");
+const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <title>Kevin Konczak - Portfolio</title>
+  </head>
+  <body class="bg-primary">
+    <div class="lg:flex lg:justify-center lg:mx-40">
+      <div class="px-6 py-10 mb-20 lg:w-1/2 lg:max-h-screen lg:sticky lg:top-0 lg:p-12 lg:mb-0">
+        <h1 class="text-6xl font-bold text-text font-vt323 mb-3">Kevin Konczak</h1>
+        <p class="text-text text-lg font-outfit-600 mb-3">Full Stack Developer</p>
+        <p class="text-text font-outfit-300 mb-6">
+          Constant learner, I enjoy engineering solutions for real-world problems.
+        </p>
+        <div class="flex gap-2">
+          <a href="https://github.com/neoke20" target="_blank" rel="noopener noreferrer">
+            <Icon name="github" class="text-xl" />
+          </a>
+          <a href="https://www.linkedin.com/in/konczakkevin/" target="_blank" rel="noopener noreferrer">
+            <Icon name="linkedin" class="text-xl" />
+          </a>
+        </div>
+      </div>
+      <div class="px-6 py-10 lg:w-1/3 lg:p-0">
+        <div class="hidden lg:block lg:fixed lg:top-4 lg:bg-text lg:text-xl lg:px-6 lg:py-2 lg:rounded-lg">
+          <nav>
+            <ul class="flex gap-6">
+              <li>
+                <a href="#about" class="text-primary font-outfit-600 hover:text-secondary transition-colors">About</a>
+              </li>
+              <li>
+                <a href="#experience" class="text-primary font-outfit-600 hover:text-secondary transition-colors"
+                  >Experience</a
+                >
+              </li>
+              <li>
+                <a href="#projects" class="text-primary font-outfit-600 hover:text-secondary transition-colors"
+                  >Projects</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="mb-12 lg:mt-20" id="about">
+          <h2 class="text-5xl font-bold text-text font-vt323 mb-6">About</h2>
+          <p class="text-text font-outfit-300 mb-3">Hi, my name is Kevin. Thanks for checking my portfolio!</p>
+          <p class="text-text font-outfit-300 mb-3">
+            I have spent the past 7 years working my way up from a web designer to a full-stack web developer, and have
+            enjoyed every step of the journey. I am a constant learner, and I find nothing more rewarding than going
+            from "I don't know how to do this", to "I can do this now!".
+          </p>
+          <p class="text-text font-outfit-300 mb-3">
+            I am currently working as a full stack developer for a Japanese digital marketing startup named <strong
+              >SENDo</strong
+            >, where I work on various projects, including, but not limited to, admin dashboards, internal tools
+            (employee portal, etc), as well as client-facing websites. Thanks to that, I get to work with a wide range
+            of technologies, including React, Remix, TypeScript, PostgreSQL, Python, Django and more. It's a challenging
+            role, but I get to use my Japanese skills, and learn new things every day, so I really enjoy it.
+          </p>
+          <p class="text-text font-outfit-300 mb-3">
+            Prior to that, I was the front end developer of a Japanese language school, responsible of the development
+            and maintenance of the school's website, as well as the development of various internal tools. I also
+            freelanced for a while as a web designer, creating websites for small businesses and individuals who wanted
+            an online presence.
+          </p>
+          <p class="text-text font-outfit-300">
+            Unapologetically geeky, I have a wide range of interests, including video games, movies, reading fantasy.
+            When the season is right, I also like to be outdoor, touch grass and disconnect from the digital world for a
+            while.
+          </p>
+        </div>
+        <div class="mb-12" id="experience">
+          <h2 class="text-5xl font-bold text-text font-vt323 mb-6">Experience</h2>
+          {
+            sortedExperiences.map((experience: any) => (
+              <div class="mb-12">
+                <div class=" lg:flex lg:gap-4">
+                  <div class="lg:w-1/3 lg:shrink-0">
+                    <p class="text-text font-outfit-600">{experience.data.position}</p>
+                    <p class="text-text-light font-bold">
+                      {experience.data.startDate} - {experience.data.endDate || "Present"}
+                    </p>
+                    <p class="text-text-light font-bold mb-3">
+                      {experience.data.company} {experience.data.location && `- ${experience.data.location}`}
+                    </p>
+                  </div>
+                  <div>
+                    <p class="text-text font-outfit-300 mb-3">{experience.data.description}</p>
+                  </div>
+                </div>
+                <ul class="flex flex-wrap gap-2">
+                  {experience.data.tags &&
+                    experience.data.tags.map((tag: string[]) => (
+                      <li>
+                        <div class="pill font-outfit-600">{tag}</div>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            ))
+          }
+        </div>
+        <div class="mb-12" id="projects">
+          <h2 class="text-5xl font-bold text-text font-vt323 mb-6">Projects</h2>
+          {
+            sortedProjects.map((project: any) => (
+              <div class="mb-8 border-b-1 border-secondary-transparent pb-4 last:border-0">
+                <p class="text-text text-lg font-outfit-600">{project.data.name}</p>
+                <a href={`/projects/${project.id}`}>
+                  <div class="font-outfit-300 button">Check Project</div>
+                </a>
+                <p class="text-text font-outfit-300 mb-3">{project.data.description}</p>
+                {project.data.image && (
+                  <Image src={project.data.image} alt={project.data.name} class="mb-3 max-w-[250px] lg:max-w-[300px]" />
+                )}
+                <div class="flex flex-wrap">
+                  {project.data.tags &&
+                    project.data.tags.map((tag) => (
+                      <div class="pill font-outfit-600 inline-block mr-2 mb-2">{tag}</div>
+                    ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

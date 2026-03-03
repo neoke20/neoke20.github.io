@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: oklch(0.2022 0.037756 223.3211);
+  --color-secondary: oklch(0.90 0.0815 190.53);
+  --color-secondary-light: oklch(0.50 0.0815 190.53);
+  --color-secondary-transparent: oklch(0.90 0.0815 190.53 / 0.5);
+  --color-text: oklch(0.9791 0 0);
+  --color-text-light: oklch(0.60 0 0);
+}
+
+.font-vt323 {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-outfit-300 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-outfit-600 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.pill {
+  @apply flex items-center text-secondary-light text-xs bg-secondary rounded-full px-2 py-1
+}
+
+.prose {
+  @apply text-text;
+  font-family: "Outfit", sans-serif;
+}
+
+.button {
+  @apply text-text px-2 py-1 bg-secondary-light inline-block my-2 rounded border border-primary hover:bg-primary hover:border hover:border-secondary-light transition-colors duration-500;
+}
