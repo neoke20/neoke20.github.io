@@ -6,6 +6,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://neoke20.github.io",
   server: {
     host: "127.0.0.1",
   },
