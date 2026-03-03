@@ -49,11 +49,18 @@ const { Content } = await render(project);
             <Image
               src={project.data.image}
               alt={project.data.name}
-              class="w-full h-auto rounded-lg my-6 lg:w-1/2 lg:max-w-[700px] lg:my-0 lg:shrink-0"
+              class="w-full h-auto rounded-lg my-6 lg:w-1/2 lg:max-w-[700px] lg:my-0 lg:shrink-0 lg:sticky lg:top-4"
             />
           )
         }
         <div>
+          {
+            project.data.url && (
+              <a href={project.data.url} target="_blank" rel="noopener noreferrer">
+                <div class="mb-4 font-outfit-300 button">See the project live</div>
+              </a>
+            )
+          }
           <div class="prose prose-invert mb-12 pb-12 border-b border-secondary-light">
             <Content />
           </div>

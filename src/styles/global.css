@@ -36,4 +36,9 @@
 
 .prose {
   @apply text-text;
+  font-family: "Outfit", sans-serif;
+}
+
+.button {
+  @apply text-text px-2 py-1 bg-secondary-light inline-block my-2 rounded border border-primary hover:bg-primary hover:border hover:border-secondary-light transition-colors duration-500;
 }
