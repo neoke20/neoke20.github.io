@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
+import Kev from "../assets/kevin.png";
 import { getCollection } from "astro:content";
 const experiences = await getCollection("experiences");
 const sortedExperiences = experiences.sort((a, b) => b.data.startDate - a.data.startDate);
@@ -32,7 +33,10 @@ const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
   <body class="bg-primary">
     <div class="lg:flex lg:justify-center lg:mx-40">
       <header class="px-6 py-10 mb-20 lg:w-1/2 lg:max-h-screen lg:sticky lg:top-0 lg:p-12 lg:mb-0">
-        <h1 class="text-6xl font-bold text-text font-vt323 mb-3">Kevin Konczak</h1>
+        <div class="flex items-baseline gap-2">
+          <Image src={Kev} alt="Picture of Kevin" class="hidden w-16 h-16 md:block" />
+          <h1 class="text-6xl font-bold text-text font-vt323 mb-3">Kevin Konczak</h1>
+        </div>
         <p class="text-text text-lg font-outfit-600 mb-3">Full Stack Developer</p>
         <p class="text-text font-outfit-300 mb-6">
           Constant learner, I enjoy engineering solutions for real-world problems.
