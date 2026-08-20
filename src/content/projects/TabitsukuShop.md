@@ -1,6 +1,6 @@
 ---
 name: "Tabitsuku (shop)"
-description: "An dashboard built for the Tabitsuku microtourism platform. The dashboard was developed for shops participating in coupon campaigns"
+description: "A dashboard built for the Tabitsuku microtourism platform. The dashboard was developed for shops participating in coupon campaigns"
 image: "./TabitsukuShop.jpg"
 tags: ["React", "Remix", "Mantine", "TypeScript", "TypeORM", "PostgreSQL", "AWS"]
 order: 5
@@ -13,7 +13,8 @@ The shop version of the Tabitsuku dashboard was created to allow shops enrolled 
 Admins of the campaigns could also be reached out via the web application to communicate directly with them, streamlining a process that was handled via classic email prior to that.
 
 ## I'm doing my part!
-*Things I was involved in in this project:*
+
+_Things I was involved in in this project:_
 
 - Mockup creation with Figma
 - Back-end (40%)
